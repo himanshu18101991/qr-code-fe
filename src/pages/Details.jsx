@@ -11,7 +11,7 @@ function Details() {
 
 	const fetchProduct = async () => {
 		try {
-			let a = `http://localhost:3001/${id}`;
+			let a = `${process.env.REACT_APP_URL}${id}`;
 			const req = await fetch(a);
 			const response = await req.json();
 			if (response?.body?.code === 500) {
