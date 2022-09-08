@@ -43,6 +43,11 @@
 }
 .result-data .values {
   word-break: break-all;
+  text-align: left;
+  font-size: 18px;
+}
+.key-data{
+  text-transform: capitalize;
 }
 @media screen and (max-width: 767px) {
   .key-data {

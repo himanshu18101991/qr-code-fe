@@ -41,12 +41,15 @@ function Details() {
 						{!productData ? (
 							<img src={logo} className="App-logo" alt="logo" />
 						) : (
-							Object.keys(productData).map((key, index) => (
-								<p key={key?.id || index}>
-									<span className="key-data">{key}: </span>
-									<span className="values">{productData[key]}</span>
-								</p>
-							))
+							Object.keys(productData).map(
+								(key, index) =>
+									productData[key] && (
+										<p key={key?.id || index}>
+											<span className="key-data">{key}: </span>
+											<span className="values">{productData[key]}</span>
+										</p>
+									)
+							)
 						)}
 					</div>
 				</div>
