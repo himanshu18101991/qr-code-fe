@@ -9,12 +9,6 @@ function Details() {
 	let { id } = useParams();
 	const [productData, setProductData] = useState(null);
 
-	useEffect(() => {
-		if (id.length) {
-			fetchProduct();
-		}
-	}, [id]);
-
 	const fetchProduct = async () => {
 		try {
 			let a = `http://localhost:3001/${id}`;
@@ -30,6 +24,13 @@ function Details() {
 			return { res: e, status: 404 };
 		}
 	};
+
+	useEffect(() => {
+		if (id.length) {
+			fetchProduct();
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [id]);
 
 	return (
 		<>
