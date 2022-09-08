@@ -10,7 +10,7 @@ export const getQRValue = async () => {
 
 export const getRedirectURL = (link) => {
 	try {
-		return `${process.env.REACT_APP_URL}/details/${link}`;
+		return `${process.env.REACT_APP_SELF}/details/${link}`;
 	} catch (err) {
 		console.log(err);
 	}
