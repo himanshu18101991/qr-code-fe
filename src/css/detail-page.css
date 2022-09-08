@@ -44,3 +44,8 @@
 .result-data .values {
   word-break: break-all;
 }
+@media screen and (max-width: 767px) {
+  .key-data {
+    min-width: 100px;
+  }
+}
